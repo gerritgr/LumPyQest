@@ -1,0 +1,24 @@
+rule:  
+  - I -> S: 1.5
+  - J -> S: 1.0
+  - S -> I: 5.0*I
+  - S -> J: 5.0*J
+
+horizon: 8
+
+
+eval_points: 101 
+
+initial_distribution:
+  S: 0.70        
+  I: 0.2
+  J: 0.1
+
+network:    
+  kmax: 55
+  degree_distribution: k**(-2.5) if k > 0 else 0.000000001  #automatic truncation and normalization
+
+lumping:
+  lumping_on: true
+  degree_cluster: 100
+  proportionality_cluster: 100
