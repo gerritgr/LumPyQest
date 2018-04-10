@@ -121,7 +121,8 @@ on Lumping:
 * Kyriakopoulos et al.
 ["Lumping of Degree Based Mean Field and Pair Approximation Equations for Multi-State Contact Processes"](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.012301)
 *  G. Großmann et al.
-"Lumping the Approximate Master Equation for Multistate Processes on Complex Networks"
+["Lumping the Approximate Master Equation for Multistate Processes on Complex Networks"]
+(https://arxiv.org/abs/1804.02981)
 * G. Großmann
 "Lumping the Approximate Master Equation for Stochastic Processes on Complex Networks" (Master's thesis)
 
