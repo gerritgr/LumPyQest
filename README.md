@@ -70,7 +70,7 @@ When the heuristic is used to determine cluster number, all intermediate steps a
 
 ## Model Descriptions
 -----------------
-The model files (placed in the model directory by default) specify the multistate process, the network, initial fractions, the number of bins, etc. They are mostly self-explanatory, however, SIR.model contains a detailed description of the structure of a model file. An example SIR model file contains:
+The model files (placed in the model directory by default) specify the multistate process, the network, initial fractions, the number of bins, etc. An example SIR model file contains:
 ```
 rule:  
   - S -> I: 3.0*I       #contact rule, "3.0*i" means three times number of infected neighbors
