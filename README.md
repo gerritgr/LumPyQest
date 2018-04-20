@@ -89,7 +89,6 @@ network:
   kmax: 60  #maximal degree in network, minimal degree not supported so far
   degree_distribution: k**(-3.0) if k > 0 else 0.00001  #automatic truncation (at kmax) and normalization
 lumping:
-  lumping_on: true
   degree_cluster: 15  
   proportionality_cluster: 15
 
