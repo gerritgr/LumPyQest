@@ -13,10 +13,10 @@ It reduces the large number of ODEs given by the equation systems by clustering 
 LumPy is written in Python 3 (requiring SciPy) and published under GPL v3 license.
 
 As input, the tool takes model descriptions (containing degree distribution, rules,
-time horizon, etc.) and outputs the lumped (or original) equations in the form of a standalone python script. One can specify an arbitrary number of labels and rules.
+time horizon, etc.) and outputs the lumped (or original) equations in the form of a standalone Python script.
 ## Installation
 ------------------
-We recommend Python 3.5.2.
+We recommend Python 3.6.
 ##### Requirements:
 
 Packages can be installed with
@@ -38,9 +38,9 @@ positional arguments:
 
 optional arguments:
   -h, --help     show this help message and exit
-  --noautorun    generate code without executing it
+  --noautorun    generate code (i.e. equations) without executing (solving) it
   --nolumping    generate original equations without lumping
-  --autolumping  use heuristic to determine number of clusters
+  --autolumping  use heuristic to determine number of clusters (ignores cluster number in model spec. file)
 ```
 Optimal arguments overwrite the modelfile specification.
 ##### Caution:
@@ -52,7 +52,7 @@ Ame.py outputs:
 * the generated Python script
 * the clustering as .csv file
 * the dynamcis as .pdf and .csv
-* a visualization of the clustering and the initial distribution
+* a visualization of the clustering and the initial distribution (only useful in 2d)
 
 When the heuristic is used to determine cluster number, all intermediate steps are stored.
 
@@ -70,7 +70,7 @@ When the heuristic is used to determine cluster number, all intermediate steps a
 
 ## Model Descriptions
 -----------------
-The model files (placed in the model directory by default) specify the multistate process, the network, initial fractions, the number of bins, etc. An example SIR model file contains:
+The .yml model files (placed in the model directory by default) specifies the multistate process, the network, initial fractions, the number of bins, etc. An example SIR model file contains:
 ```
 rule:  
   - S -> I: 3.0*I       #contact rule, "3.0*I" means three times number of infected neighbors
@@ -96,7 +96,7 @@ lumping:
 
 ## TODOs
 ------------------
-*  Output C++/Julia(?) code instead of Python
+*  Output C++ code instead of Python
 *  Use symbolic expressions (not strings) consequently during code generation
 *  Stop using dicts in AME solver and delete unused betas
 *  Refactor/clean/document code
