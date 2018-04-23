@@ -7,7 +7,7 @@ import traceback
 # Python version check
 #------------------------------------------------------
 
-if 1/5 == 0:
+if 1/5 == 0: #there's prbly. a better way to do this
 	raise RuntimeError('Do not use Python 2.x!')
 
 #------------------------------------------------------
@@ -77,34 +77,33 @@ def create_normalized_np(v, return_original_if_zero = False):
 	v = v / partition
 	return v
 
-# careful: does not handle sets correctly
-def dict_to_uniquestr(dict_or_value):
-	if isinstance(dict_or_value,dict):
-		dict_strkey = {str(k):v for k,v in dict_or_value.items()}
-		result = [(k,dict_strkey[k]) for k in sorted(dict_strkey.keys())]
-		return str(result)
-	else:
-		return str(dict_or_value)
+# # careful: does not handle sets correctly
+# def dict_to_uniquestr(dict_or_value):
+# 	if isinstance(dict_or_value,dict):
+# 		dict_strkey = {str(k):v for k,v in dict_or_value.items()}
+# 		result = [(k,dict_strkey[k]) for k in sorted(dict_strkey.keys())]
+# 		return str(result)
+# 	else:
+# 		return str(dict_or_value)
 
-def dict_to_uniquekey(dict_or_value):
-	import hashlib
-	import random
-	#s = dict_to_uniquestr(dictor_value) some bug here
-	s = sorted(str(dict_or_value)) 
-	s = ''.join(s)
-	s = s.strip()
-	random.seed(s)
-	#hash_object = hashlib.md5(s.encode('utf-8'))
-	x = str(random.random())[3:13]
-	#x = hash_object.hexdigest()
-	return x
+# def dict_to_uniquekey(dict_or_value):
+# 	import hashlib
+# 	import random
+# 	#s = dict_to_uniquestr(dictor_value) some bug here
+# 	s = sorted(str(dict_or_value)) 
+# 	s = ''.join(s)
+# 	s = s.strip()
+# 	random.seed(s)
+# 	#hash_object = hashlib.md5(s.encode('utf-8'))
+# 	x = str(random.random())[3:13]
+# 	#x = hash_object.hexdigest()
+# 	return x
 
 #------------------------------------------------------
 # File generation
 #------------------------------------------------------
 
 def genrate_file_ame(model):
-	#ode_text = model['ode_text']
 	outfolder = model['output_dir']
 	import os
 	if not os.path.exists(outfolder):
@@ -115,6 +114,7 @@ def genrate_file_ame(model):
 	target.close()
 
 	# execute python code in curly brackets
+	# * is an ugly hack
 	template = template.replace(r'}}',r'*{{')
 	template = template.split(r'{{')
 	for i in range(len(template)):
@@ -160,7 +160,6 @@ def elemcount_mset_for_degree(degree, dim):
 	from scipy.special import binom
 	return binom(degree+dim-1, dim-1)
 
-
 def multinomial_pmf(choice_vector, probability_vector):
 	from scipy.stats import multinomial
 	if np.sum(choice_vector) == 0:
@@ -172,7 +171,8 @@ def multinomial_pmf(choice_vector, probability_vector):
 # Symbolic symplification
 #------------------------------------------------------
 
-def ode_simplify(formula):
+#unused
+def ode_simplifyformula):
 	original = formula
 	logger.debug('get formula: {}'.format(formula))
 	try:
@@ -309,8 +309,3 @@ def trajectories_to_csv(model, filepath, header='sep=;\n', sep=';'):
 			if i != list(range(len(trajectories[states[0]])))[-1]:
 				f.write('\n')
 
-
-#print(elemcount_mset(30,2))
-#print('reality: ', 496)
-
-#print(eval_rate(['S'], [4], 'S+10'))

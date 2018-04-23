@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use('agg')	#run without an X-server
+matplotlib.use('agg')	#run without X-server
 import matplotlib.pyplot as plt
 #import seaborn as sns 
 import random
@@ -48,7 +48,6 @@ def plot_clustering_2d(model, cluster_to_elems):
 		elems = list(elems_projection)
 		x = [elem[0] for elem in elems]
 		y = [elem[1] for elem in elems]
-		#ax.scatter(x, y, c=cp[i % len(cp)], alpha=0.9, linewidths=0.0)
 		ax.scatter(x, y, alpha=0.9, linewidths=0.0)
 	ax.set_xlim(xmin=-0.3)
 	ax.set_ylim(ymin=-0.3)
@@ -324,15 +323,6 @@ def plot_trajectories_individual(solution_csv, clustering_csv, outfolder):
 			line_new = {k:v for k,v in line.items() if eval(k)[0] == s}
 			plot_trajectories_individual_line(line_new, clustering, outpath, s, states, 10**(-10), 1.0)
 
-
-
-
-
-
-
-#ax = sns.heatmap(flights, center=flights.loc["January", 1955])
-
-#plot_scatter(range(10), range(10), 'out.pdf')
 
 
 if __name__ == '__main__':

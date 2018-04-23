@@ -4,8 +4,6 @@
 """
 This script generates code which implements AME lumping for a given model.
 The generated script (placed in the ./output directory by default) runs independently of the toolset.
-The autorun flag allows it to call the generated code directly after creation.
-If the number of clusters (i.e. bin_num) is set to auto, the code is generated and executed until the stopping criterion (in evaluation.py) is fulfilled.
 Additional output is written into LumpingLog.log (see utilities.py for logging options).
 
 Caution:
@@ -13,21 +11,13 @@ The code uses eval/exec, please use with sanitized input only.
 Existing files are overwritten without warning.
 
 Example usage and arguments:
-python ame.py model/SIR.model     		# to generate a script of SIR.model
+python ame.py model/SIR.yml
 
 See the README.md for more optinos.
-
-For more information we refer to:
-Kyriakopoulos et al. "Lumping of Degree Based Mean Field and Pair Approximation Equations for Multi State Contact Processes"
-
-Website:
-https://mosi.uni-saarland.de/?page_id=lumpy
-
-Tested with Python 3.5.2.
 """
 
 __author__ = "Gerrit Grossmann"
-__copyright__ = "Copyright 2016, Gerrit Grossmann, Group of Modeling and Simulation at Saarland University"
+__copyright__ = "Copyright 2018, Gerrit Grossmann, Group of Modeling and Simulation at Saarland University"
 __license__ = "GNU GPLv3"
 __version__ = "0.1"
 __email__ = "gerrit.grossmann@uni-saarland.de"
@@ -84,9 +74,10 @@ def beta_sums(model, elem_to_cluster, cluster_to_elems, degree_and_cluster_to_we
 		weight = degree_and_cluster_to_weight[(degree, cluster)]
 		coefficient_store[coefficient] += elem_count*weight
 	beta_sum = coefficient_to_sum(coefficient_store)
-	if "20," in str(cluster) and state == 'S' and s_minus == 'I' and s_plus == 'R':
-		print(cluster)
-		print(beta_sum)
+	#debug:
+	#if "20," in str(cluster) and state == 'S' and s_minus == 'I' and s_plus == 'R':
+	#	print(cluster)
+	#	print(beta_sum)
 	return beta_sum
 
 
@@ -112,7 +103,6 @@ def get_rate_sum(model, cluster, s1, s2, elem):
 			rate_sum += rule[3](elem)	
 	return rate_sum
 
-# hier ne avg func draus machen
 def gen_beta_weight_for_states(model, cluster, s, s1, s2, cluster_to_elems, degree_and_cluster_to_weight):
 	m_sum = 0.0
 	for elem in cluster_to_elems[cluster]:
@@ -150,8 +140,8 @@ def write_pickle(model):
 	pickle.dump(model, open(model['pickle_path'], "wb"))
 
 def set_modelpaths(model):
+	# defien where everything is put
 	import os
-
 	model['output_dir'] = './output/{}/'.format(model['name'])
 	if 'name_extension' not in model:
 		model['output_path'] = model['output_dir']+'ame_{}_{}.py'.format(model['name'], model['actual_cluster_number'])
@@ -166,6 +156,7 @@ def set_modelpaths(model):
 	return model
 
 def write_data(odes, beta_exprs, model, cluster_to_centroid):
+	#prepare model to output stand-alone script
 	ode_str = ''
 	for line in beta_exprs:
 		ode_str += '\t' + str(line) + '\n'
@@ -187,6 +178,7 @@ def write_data(odes, beta_exprs, model, cluster_to_centroid):
 		centroid = cluster_to_centroid[key[1]]
 		centroid_vectors.append(centroid)
 	model['centroid_vectors'] = centroid_vectors
+	# actually write data
 	return genrate_file_ame(model)
 
 
@@ -202,30 +194,8 @@ def write_clustering(model, elem_to_cluster, degree_and_cluster_to_weight):
 # Initial Distribution
 #------------------------------------------------------
 
-def gen_initial_distribution_old(model):
-	state_and_m_to_init = dict()
-	init_dist_vector = [model['initial_distribution'][state] for state in model['states']]
-	for state in model['states']:
-		state_scale = model['initial_distribution'][state]
-		for elem, cluster in model['elem_to_cluster'].items():
-			identifier = (state, elem)
-			if identifier not in state_and_m_to_init: state_and_m_to_init[identifier] = 0.0
-			elem_scale = multinomial_pmf(elem, init_dist_vector)
-			try:
-				assert(elem_scale > 0.0)
-			except:
-				print(elem)
-				print(init_dist_vector)
-				raise
-			degree = np.sum(elem)
-			degree_prob = model['network']['degree_distribution'][degree]
-			state_and_m_to_init[identifier] += state_scale*elem_scale*degree_prob
-	
-	Z = np.sum(list(state_and_m_to_init.values()))
-	state_and_m_to_init_normalized = {k:v/Z for k,v in list(state_and_m_to_init.items())}
-	return state_and_m_to_init_normalized
-
 def gen_initial_distribution(model):
+	# compute the multinomial initial distribution for each variable
 	state_and_m_to_init = dict()
 	init_dist_vector = [model['initial_distribution'][state] for state in model['states']]
 	for state in model['states']:
@@ -241,7 +211,6 @@ def gen_initial_distribution(model):
 				print(init_dist_vector)
 				raise
 			degree = np.sum(elem)
-			#degree_prob = model['network']['degree_distribution'][degree]
 			state_and_m_to_init[identifier] += state_scale*elem_scale
 	
 	sum_for_degree = dict()
@@ -260,6 +229,7 @@ def gen_initial_distribution(model):
 	return state_and_m_to_init_normalized
 
 def lump_initial_distribution(model, state_and_m_to_init, cluster_to_elems):
+	# lumping the initial distribution is just adding up the init vlaues for all variables inside a cluster
 	state_cluster_to_init = dict()
 	for state in model['states']:
 		for cluster, elems in cluster_to_elems.items():
@@ -274,7 +244,6 @@ def lump_initial_distribution(model, state_and_m_to_init, cluster_to_elems):
 # Stropping Heuristic
 #------------------------------------------------------
 
-#def stopping_heuristic(modelpath, stop_threshold=0.0000001, multiply_step=1.3, cluster_start=10):
 def stopping_heuristic(modelpath, stop_threshold=0.01, multiply_step=1.3, cluster_start=10):
 	import pandas as pd
 	errors = list()
@@ -292,7 +261,6 @@ def stopping_heuristic(modelpath, stop_threshold=0.01, multiply_step=1.3, cluste
 		generate_and_solve(model, True, False)
 		if outpath is None:
 			outpath = model['output_path'].replace('ame_', 'heuristic_').replace('.py', '.csv')
-			#max_cluster_num = elemcount_mset(model['network']['kmax'], len(model['states']))
 		if old_model is not None:
 			error = compare_models(model, old_model)
 			logger.info('Difference is: '+str(error))
@@ -308,7 +276,7 @@ def stopping_heuristic(modelpath, stop_threshold=0.01, multiply_step=1.3, cluste
 				logger.info('break')
 				break
 		old_model = model
-		current_cluster_number = max(current_cluster_number*multiply_step,current_cluster_number+1) #make sure at least one cluste more
+		current_cluster_number = max(current_cluster_number*multiply_step,current_cluster_number+1) #to make sure we add at least one cluster
 		current_cluster_number = int(current_cluster_number+.5)
 
 #------------------------------------------------------
@@ -321,6 +289,7 @@ def solve_ode(model):
 	folderpath = model['output_dir']
 	filename = model['output_name']
 	sys.path.append(folderpath)
+	# import generated script
 	exec('import {} as odecode'.format(filename[:-3]), globals())
 	results, t, time_elapsed = odecode.plot()
 	model['trajectories'] = results
@@ -335,22 +304,25 @@ def solve_ode(model):
 
 def generate_and_solve(model, autorun, unbinned):
 	if unbinned:
+		# overwrite model spec
 		model['lumping']['lumping_on'] = False
 
+	# load model if already solved
 	modelid = '{}_{}_{}_{}'.format(model['name'], model['lumping']['degree_cluster'],model['lumping']['proportionality_cluster'], unbinned)
-	#modelid = dict_to_uniquekey(model) buggy
 	pickle_path = './output/{}/model_{}.p'.format(model['name'], modelid)
 	model['pickle_path'] = pickle_path
-
 	try:
 		model = load_pickle(model)
 		print('Found pickled model.')
 		return model 
 	except:
 		pass
+	
+	# otherwise, solve model
 
+	# clustering should be more consistent
 	logger.info('Start Clustering.')
-	elem_to_cluster, cluster_to_elems, centroids = cluster_engine.generate_clusters(model, unbinned)  # TODO change
+	elem_to_cluster, cluster_to_elems, centroids = cluster_engine.generate_clusters(model, unbinned)
 	model['elem_to_cluster'] = elem_to_cluster
 	degree_and_cluster_to_weight = cluster_engine.compute_cluster_weights(elem_to_cluster, model['network']['degree_distribution'])
 	elem_init = gen_initial_distribution(model)
@@ -359,27 +331,24 @@ def generate_and_solve(model, autorun, unbinned):
 	cluster_rate = cluster_engine.find_avg_rates(elem_to_cluster, degree_and_cluster_to_weight, model['rules'])
 	model['actual_cluster_number'] = len(cluster_to_centroid) 
 
-	# #todo create real centroid diretions
-	#cluster_info = cluster_engine.compute_avg_clustering(model, unbinned)
-	#model['cluster_info'] = cluster_info
-	#if unbinned: model['lumping']['kmax_threshold'] = model['network']['kmax']
-	#cluster_engine.compute_exact_clustering(model, degree_and_cluster_to_weight, unbinned)
-	#for key,value in cluster_info.items():
-#		if '(20, (' in str(key):
-	#		print(key,value['beta_weights'])
-
+	# needs cluster number to define output filepath
 	set_modelpaths(model)
+
+	# write plots
 	visualization.plot_clustering_2d(model, cluster_to_elems)
 	visualization.plot_cluster_init(model, cluster_to_centroid)
 	visualization.plot_cluster_init_full(model, cluster_to_centroid, cluster_to_elems, degree_and_cluster_to_weight)
 	write_clustering(model, elem_to_cluster, degree_and_cluster_to_weight)
 
+	# compute beta weights
 	beta_sum_store = compute_neighbor_sums(model, elem_to_cluster, cluster_to_elems, degree_and_cluster_to_weight)
 
+	# generate ODEs
 	logger.info('Generate ODEs.')
 	odes, beta_exprs = expr_generator.generate_odes(model, cluster_to_centroid, beta_sum_store, cluster_to_elems, cluster_rate)
 	logger.info('Generate ODEs finished.')
 
+	# precompute values inside beta-computation
 	gen_beta_weight(model, cluster_to_elems, degree_and_cluster_to_weight)
 
 	outpath = write_data(odes, beta_exprs, model, cluster_to_centroid)
@@ -388,13 +357,13 @@ def generate_and_solve(model, autorun, unbinned):
 		sol = solve_ode(model)
 		model['sol'] = sol
 	logger.info('Done.')
+
+	# save model
 	write_pickle(model)
 	return model
 
 def main(modelpath, autorun, unbinned):
 	model = model_parser.parse_file(modelpath)
-	# if not unbinned and auto
-	# TODOreturn stopping_heuristic(modelpath)
 	return generate_and_solve(model, autorun, unbinned)
 
 if __name__ == '__main__':
@@ -408,6 +377,8 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 	if args.autolumping:
 		assert(not args.noautorun and not args.nolumping)
+		# use heusistic
 		stopping_heuristic(args.model)
 	else:
+		# use predefined cluster number from model file
 		main(args.model, not args.noautorun, args.nolumping)
