@@ -172,7 +172,7 @@ def multinomial_pmf(choice_vector, probability_vector):
 #------------------------------------------------------
 
 #unused
-def ode_simplifyformula):
+def ode_simplifyformula():
 	original = formula
 	logger.debug('get formula: {}'.format(formula))
 	try:
