@@ -145,6 +145,8 @@ def generate_clusters(model, unbinned):
 
     mset = utilities.gen_mset(model['network']['kmax'], len(model['states']))
 
+    print('len mset ', len(mset))
+
     for point in mset:
         centroid =  get_proportionality_cluster(point, proportionality_cluster_num)
         degree_cluster = degree_clusters[np.sum(point)] 

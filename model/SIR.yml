@@ -13,7 +13,7 @@ initial_distribution:
 
 network:    
 
-  kmax: 60
+  kmax: 150
   degree_distribution: k**(-3.0) if k > 0 else 0.00001  
 
 
