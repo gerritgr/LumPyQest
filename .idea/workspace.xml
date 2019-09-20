@@ -2,9 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea979e84-d6b7-470e-83f8-91179cf54d00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clusterWideError.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/clusterWideError.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/SIR.yml" beforeDir="false" afterPath="$PROJECT_DIR$/model/SIR.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0000.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0297.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0297.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0594.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0594.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0891.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.0891.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1188.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1188.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1485.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1485.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1782.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.1782.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2079.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2079.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2376.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2376.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2673.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2673.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2970.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.2970.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3267.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3267.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3564.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3564.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3861.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.3861.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4158.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4158.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4455.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4455.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4752.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.4752.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5049.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5049.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5346.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5346.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5643.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5643.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5940.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.5940.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6237.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6237.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6534.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6534.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6831.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.6831.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7128.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7128.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7425.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7425.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7722.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.7722.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8019.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8316.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8316.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8613.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8613.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8910.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.8910.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9207.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9207.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9504.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9504.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9801.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=0.9801.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0099.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0099.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0396.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0396.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0693.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0693.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0990.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.0990.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1287.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1287.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1584.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1584.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1881.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.1881.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2178.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2178.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2475.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2475.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2772.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.2772.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3069.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3069.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3366.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3366.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3663.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3663.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.3960.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4257.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4257.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4554.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4554.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4851.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.4851.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5148.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5148.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5445.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5445.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5742.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.5742.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6039.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6039.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6336.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6336.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6633.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6633.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6930.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.6930.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7227.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7227.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7524.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7524.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7821.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.7821.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8118.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8118.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8415.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8415.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8712.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.8712.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9009.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9306.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9306.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9603.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9603.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9900.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=1.9900.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0198.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0198.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0495.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0495.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0792.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.0792.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1089.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1089.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1386.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1386.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1683.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1683.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1980.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.1980.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2277.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2277.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2574.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2574.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2871.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.2871.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3168.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3168.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3465.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3465.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3762.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.3762.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4059.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4059.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4356.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4356.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4653.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4653.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4950.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.4950.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5247.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5247.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5544.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5544.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5841.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.5841.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6138.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6138.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6435.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6435.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6732.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.6732.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7029.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7029.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7326.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7326.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7623.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7623.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.7920.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8217.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8217.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8514.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8514.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8811.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.8811.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9108.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9108.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9405.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9405.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9702.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/gif_out/DIFFReduced73Inft=2.9702.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,24 +161,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/SIR.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="135" column="18" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ame.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4860">
@@ -101,7 +183,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/SIRapproxGen.yml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -131,8 +213,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -191,10 +274,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14110756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -208,7 +291,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.16480793" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.12014453" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="JuliaSciView" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -226,13 +309,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4860">
@@ -247,11 +323,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SIRapproxGenLarge.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/SIRapproxGen.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1688">
+          <caret line="130" column="38" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/SIR.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -260,12 +337,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualization.py">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="135" column="18" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SIRapproxGenLarge.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SIRapproxGen.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
